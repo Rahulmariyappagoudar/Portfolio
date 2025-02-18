@@ -1,47 +1,48 @@
 
 export const services = [
     {
-        title: "Technology Enthusiast",
+        title: "Data visualization and Analysis",
         icon: 'https://csgeeek.github.io/web.png',
     },
     {
-        title: "Software Engineer",
+        title: "AI/ML",
         icon: 'https://csgeeek.github.io/web.png',
     },
     {
-        title: "Photographer",
+        title: "Gears and Glory",
         icon: 'https://csgeeek.github.io/web.png',
     },
 ];
 
-export const name = 'Nithin';
+export const name = 'Rahulgouda!';
 
 export const experiences = [
     {
-        'company': 'Inncircles Technologies',
-        'role': 'Product Developer',
-        'duration': 'April 2023 - Present',
-        'logo': 'https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/e5gz1yggdy8sc1umna3e',
+        'company': 'Amsa Embedded Solutions- Hubli',
+        'role': 'Web Developer',
+        'duration': 'Mar 2023 – Apr 2023',
+        'logo': 'data:image/png;base64,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',
         'points': [
-            'Involved in dynamic contributions to web and mobile📱 development projects, actively influencing and improving project outcomes.',
-            'Developed multiple shared components to simplify tasks for fellow developers, boosting efficiency and teamwork.',
-            'Enhanced product performance through significant contributions to backend development, optimizing essential components for improved efficiency 📈.',
-            'Implemented data security for the company’s product to provide role-based access control ⚙️.'
+            'Enhanced web development skills with Amsa Embedded Solutions, mastering HTML, PHP, CSS, and SQL.',
+            'Designed and implemented a robust website infrastructure that increased load speed by 50% and reduced user drop-off rates by 30%; leveraged skills in PHP and SQL to optimize back-end performance.'
         ],
-        'url': 'https://inncircles.com/#home',
+        'url': 'https://www.example.com', // Replace with the actual company website link
     },
     {
-        'company': 'AT & T',
-        'role': 'Technical Intern',
-        'duration': 'Jan 2023 - March 2023',
-        'logo': 'https://www.att.com/ecms/dam/att/consumer/global/logos/att_globe_500x500.jpg',
+        'company': 'Unified Mentor',
+        'role': 'Data Analyst Intern',
+        'duration': 'Dec 2024 – Present',
+        'logo': 'data:image/png;base64,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',
         'points': [
-            'Gained experience with Git version control contributing to the development and maintenance of code repositories.',
-            'Worked on the application dashboard, making it more user-friendly and improving its overall functionality📱.'
+            'Assisted in data collection, cleaning, and preprocessing for large datasets.',
+            'Performed exploratory data analysis (EDA) to identify trends and insights using Python libraries like Pandas and Matplotlib.',
+            'Created dashboards and visualizations using Tableau to present data insights and business metrics effectively.',
+            'Collaborated with senior data analysts to optimize reporting processes and increase overall data accessibility for decision-making.'
         ],
-        'url': 'https://www.att.com/',
+        'url':'https://unifiedmentor.com/',
     },
 ]
+
 
 
 
