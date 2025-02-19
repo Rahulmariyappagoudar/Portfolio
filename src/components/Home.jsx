@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { name } from '../constants';
+import React, { useState, useEffect, useRef } from 'react';
+import { name } from '../constants'; 
 import Background from './Background';
 import Footer from './Footer';
 
 const Home = () => {
     const [text, setText] = useState('');
-    let index = 0;
+    const index = useRef(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (index < name.length) {
-                setText((prev) => prev + name[index]);
-                index++;
+            if (index.current < name.length) {
+                setText((prev) => prev + name[index.current]);
+                index.current += 1;
             } else {
                 clearInterval(interval);
             }
@@ -20,18 +20,14 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='area relative z-0 bg-black w-screen h-screen'>
-            <Background /> 
-            <ul className="circles">
-                <li></li><li></li><li></li><li></li><li></li>
-                <li></li><li></li><li></li><li></li><li></li>
-            </ul>
-            <div className='hero relative h-[calc(100vh)] flex justify-center items-center text-white' id='hero'>
-                <div className='pt-4 h-36 backdrop-blur-sm rounded-3xl text-center'>
-                    <h1 className='text-6xl sm:text-7xl font-extrabold mt-2'>
-                        Hi, I'm <span className='text-yellow-200 font-extrabold'>{text}</span>
+        <div className="relative z-0 bg-black w-screen h-screen">
+            <Background />
+            <div className="hero flex justify-center items-center text-white h-full">
+                <div className="pt-4 h-36 backdrop-blur-sm rounded-3xl text-center">
+                    <h1 className="text-6xl sm:text-7xl font-extrabold mt-2">
+                        Hi, I'm <span className="text-yellow-200">{text}</span>
                     </h1>
-                    <p className='mt-3 text-xl'>
+                    <p className="mt-3 text-xl">
                         I am a passionate Data Analyst and Visualization Enthusiast, exploring the world of data and building impactful insights.
                     </p>
                 </div>
@@ -39,6 +35,6 @@ const Home = () => {
             <Footer />
         </div>
     );
-}
+};
 
 export default Home;
