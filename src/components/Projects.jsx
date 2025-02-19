@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
     return (
-        <div className="w-[300px] h-[450px] bg-gray-900 border border-neutral-100 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+        <div className="w-[300px] max-w-full h-[450px] bg-gray-900 border border-neutral-100 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col">
             <a href="#">
                 <img className="w-full h-[180px] object-cover rounded-t-lg" src={image} alt={title} />
             </a>
@@ -22,7 +22,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             <div className='m-2 flex justify-between items-end'>
                 <div className='flex flex-wrap gap-2'>
                     {technologies.map((tag, index) => (
-                        <p key={`${index}-${tag}`} className='text-[12px] text-blue-500'>
+                        <p key={${index}-${tag}} className='text-[12px] text-blue-500'>
                             #{tag}
                         </p>
                     ))}
@@ -38,7 +38,8 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
 const Projects = () => {
     return (
         <div className="bg-black py-12">
-            <div className="flex flex-wrap gap-7 justify-center items-center m-12 p-12">
+            {/* Fix alignment & spacing */}
+            <div className="flex flex-wrap justify-center gap-10 px-4 md:px-10">
                 {project.map((item, index) => (
                     <ProjectCard
                         key={index}
