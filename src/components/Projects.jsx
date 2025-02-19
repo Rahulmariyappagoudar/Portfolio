@@ -22,7 +22,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             <div className='m-2 flex justify-between items-end'>
                 <div className='flex flex-wrap gap-2'>
                     {technologies.map((tag, index) => (
-                        <p key={${index}-${tag}} className='text-[12px] text-blue-500'>
+                        <p key={`${index}-${tag}`} className='text-[12px] text-blue-500'>
                             #{tag}
                         </p>
                     ))}
