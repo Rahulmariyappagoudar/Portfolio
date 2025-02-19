@@ -33,7 +33,7 @@ const About = () => {
           <div className='sm:px-16 px-2'>
           <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Introduction</h2>
             <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>
-              👨‍💻 Hi, I'm <strong>RahulGouda!</strong>, an undergraduate in the <strong>AIML</strong> branch, with a deep interest in <strong>Data Visualization</strong> and <strong>Data Analysis</strong>. 
+              👨‍💻 Hi, I'm <strong>RahulGouda!</strong>, an undergraduate in the <strong>AI/ML</strong> branch, with a deep interest in <strong>Data Visualization</strong> and <strong>Data Analysis</strong>. 
               As a data enthusiast, I believe in the power of data to tell compelling stories and help make informed decisions. 🚀
               <br />
                I am a firm believer in <strong>God's plan</strong>, which guides me in both my personal and professional journey. 
