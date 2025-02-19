@@ -7,11 +7,18 @@ const Home = () => {
     const ref = useRef(0);
     const [text, setText] = useState('');
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (ref.current < name.length) {
-                ref.current++;
-                setText((prev) => prev + name[ref.current - 1]);  // Use previous state
+   useEffect(() => {
+  let index = 0;
+  const interval = setInterval(() => {
+    if (index < name.length) {
+      setText((prev) => prev + name[index]);
+      index++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 500);
+  return () => clearInterval(interval);
+}, []);
             }
         }, 500);
         return () => clearInterval(interval);
