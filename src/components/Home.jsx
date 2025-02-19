@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { name } from '../constants';
 import Background from './Background';
 import Footer from './Footer';
 
 const Home = () => {
-    const ref = useRef(0);
     const [text, setText] = useState('');
+    let index = 0;
 
     useEffect(() => {
-        let index = 0;
         const interval = setInterval(() => {
             if (index < name.length) {
                 setText((prev) => prev + name[index]);
@@ -22,18 +21,10 @@ const Home = () => {
 
     return (
         <div className='area relative z-0 bg-black w-screen h-screen'>
-            <Background /> {/* Ensure Background component is included */}
+            <Background /> 
             <ul className="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li></li><li></li><li></li><li></li><li></li>
+                <li></li><li></li><li></li><li></li><li></li>
             </ul>
             <div className='hero relative h-[calc(100vh)] flex justify-center items-center text-white' id='hero'>
                 <div className='pt-4 h-36 backdrop-blur-sm rounded-3xl text-center'>
