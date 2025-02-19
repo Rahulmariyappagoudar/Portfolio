@@ -3,9 +3,26 @@ import automatic from '../assets/automatic.png';
 import sugarcane from '../assets/sugarcane.png';
 import Footer from './Footer';
 
+export const project = [
+    {
+        title: 'Automatic Report Generator',
+        description: 'A report generator using Google Gemini API in different languages and templates, frameworks using Streamlit.',
+        image: automatic,
+        git: 'https://github.com/Rahulmariyappagoudar/Automatic-report-generator',
+        technologies: ['Python', 'API integration', 'NLP', 'Generative AI', 'Streamlit']
+    },
+    {
+        title: 'Sugarcane leaf disease detection',
+        description: 'This project is a machine learning-based approach to detect diseases in sugarcane leaves. It uses a ResNet50 model for classification.',
+        image: sugarcane,
+        git: "https://github.com/Rahulmariyappagoudar/sugarane-leaf-disease-detection",
+        technologies: ['Machine learning', 'Python', 'Flask', 'Tensorflow', 'Keras']
+    }
+];
+
 const ProjectCard = ({ image, title, description, git, technologies }) => {
     return (
-        <div className="w-[300px] max-w-full h-[450px] bg-gray-900 border border-neutral-100 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+        <div className="w-full sm:w-[300px] h-auto bg-gray-900 border border-neutral-100 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 flex flex-col">
             <a href="#">
                 <img className="w-full h-[180px] object-cover rounded-t-lg" src={image} alt={title} />
             </a>
@@ -38,8 +55,7 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
 const Projects = () => {
     return (
         <div className="bg-black py-12">
-            {/* Fix alignment & spacing */}
-            <div className="flex flex-wrap justify-center gap-10 px-4 md:px-10">
+            <div className="flex flex-wrap gap-7 justify-center items-center m-4 sm:m-12 p-4 sm:p-12">
                 {project.map((item, index) => (
                     <ProjectCard
                         key={index}
@@ -55,22 +71,5 @@ const Projects = () => {
         </div>
     );
 };
-
-export const project = [
-    {
-        title: 'Automatic Report Generator',
-        description: 'A report generator using Google Gemini API in different languages and templates, frameworks using Streamlit.',
-        image: automatic,
-        git: 'https://github.com/Rahulmariyappagoudar/Automatic-report-generator',
-        technologies: ['Python', 'API integration', 'NLP', 'Generative AI', 'Streamlit']
-    },
-    {
-        title: 'Sugarcane leaf disease detection',
-        description: 'This project is a machine learning-based approach to detect diseases in sugarcane leaves. It uses a ResNet50 model for classification.',
-        image: sugarcane,
-        git: "https://github.com/Rahulmariyappagoudar/sugarane-leaf-disease-detection",
-        technologies: ['Machine learning', 'Python', 'Flask', 'Tensorflow', 'Keras']
-    }
-];
 
 export default Projects;
