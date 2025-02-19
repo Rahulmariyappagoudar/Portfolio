@@ -3,6 +3,7 @@ import automatic from '../assets/automatic.png';
 import sugarcane from '../assets/sugarcane.png';
 import Footer from './Footer';
 
+// ✅ Move project array ABOVE the Projects component
 export const project = [
     {
         title: 'Automatic Report Generator',
