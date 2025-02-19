@@ -14,7 +14,7 @@ export const services = [
     },
 ];
 
-export const name = 'Rahulgouda!';
+export const name = 'Rahul!';
 
 export const experiences = [
     {
